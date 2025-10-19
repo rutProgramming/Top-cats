@@ -5,9 +5,9 @@ import { EmojiEvents } from "@mui/icons-material";
 import type { Player } from "../types";
 
 function trophyColor(pos: number) {
-  if (pos === 1) return "#FFD700";
+  if (pos === 1) return "#262623ff";
+  if (pos === 3) return "#b8b3adff";
   if (pos === 2) return "#C0C0C0";
-  if (pos === 3) return "#CD7F32";
   return "#B39DDB";
 }
 
@@ -27,7 +27,9 @@ export default function BottomCards({ players }: { players: Player[] }) {
             }}
           >
             <EmojiEvents sx={{ fontSize: 40, color: trophyColor(idx + 1) }} />
-            <Typography variant="h6" fontWeight={700}>{player.name}</Typography>
+            <Typography variant="h6" fontWeight={700}>
+              {player.name}
+            </Typography>
             <Typography>💎 {player.score ?? 0}</Typography>
           </Paper>
         </Grid>

@@ -1,6 +1,6 @@
 import type { Player, NewUser, EditUser, AroundResponse } from "./types";
 
-const API_BASE = "http://localhost:3000";
+const API_BASE = 'https://top-cats-server.onrender.com';
 
 export async function fetchTopPlayers(limit = 100): Promise<Player[]> {
   const res = await fetch(`${API_BASE}/leaderboard/top?limit=${limit}`);

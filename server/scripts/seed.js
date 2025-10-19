@@ -1,7 +1,6 @@
 // scripts/seed.js
-const repo = require('../src/repositories/leaderboard.repo');
-const pool = require('../src/db/pool');
-
+import pool from '../src/db/pool.js';
+import * as repo from '../src/repositories/leaderboard.repo.js';
 const data = [
   { name:'Alice', image_url:'https://ex.com/a.jpg', score:1500 },
   { name:'Bob',   image_url:'https://ex.com/b.jpg', score:1750 },
